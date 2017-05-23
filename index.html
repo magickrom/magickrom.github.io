@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>魔法ROM</title>
+<meta name="keywords" content="膜法师"><!--关键词-->
+<meta name="description" content="膜法师"><!--描述-->
+<link rel="stylesheet" href="css/style.css">
+<style>
+p{
+color:#fff;
+font-size:15px;
+text-shadow: 0 0 10px #529DFF;
+}
+</style>
+</head>
+<body>
+<div class="wrap about_page" id="wrap">
+  <div class="wrapper">
+    <div class="header">
+      <div class="head">
+
+          <div class="nav_box">
+            <ul class="nav_list" id="nav_list">
+		 <li><a href="javascript:void(0);" onclick="play()" id="playbtn" class="btn_sound"></a></li>
+		 <li><a href="/rom" target="_blank">ROM</a></li>
+		 <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2285618289" target="_blank">联系我吧</a></li>
+            </ul>
+            <span class="ic_line" id="h_line"></span>
+          </div>
+      </div>
+    </div>
+    <div class="events_sec" id="events_sec">
+      <div class="content">
+        <h3 class="hide_txt png">膜法师</h3>
+        <div class="events_list">
+          <span class="ic_time png"></span>
+          <ul>
+            <li class="right_li">
+              <span class="ic_events png"></span>
+              <p class="txt_events"><strong>2016.02初次接触安卓源代码</strong></p>
+            </li>
+            <li class="left_li">
+              <span class="ic_events"><i class="png"></i></span>
+              <p class="txt_events"><strong>2016.03月第一个刷机包出炉</strong></p>
+            </li>
+            <li class="right_li">
+              <span class="ic_events png"></span>
+              <p class="txt_events"><strong>2016年04月 全球首发红米2 7.0ROM</strong></p>
+            </li>
+            <li class="left_li">
+              <span class="ic_events"><i class="png"></i></span>
+              <p class="txt_events"><strong>2016年10月首发红米4A第一个ROM</strong></p>
+            </li>
+            <li class="right_li">
+              <span class="ic_events png"></span>
+              <p class="txt_events"><strong>2016年12月首发红米4A 7.1 ROM</strong></p>
+            </li>
+            <li class="left_li">
+              <span class="ic_events"><i class="png"></i></span>
+              <p class="txt_events"><strong>2017年开始红米4X新的征程</strong></p>
+            </li>
+          </ul>
+          <span class="ic_arr png"></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="wage_sec" id="wage_sec">
+      <div class="content">
+        <h3 class="tt_bg">请期待</h3>
+		<center>
+<p>膜法力，决定做的ROM有多强;忍耐力决定ROM的稳定性有多棒</p>
+<p>膜法师 - 专注于安卓ROM</p>
+</br></br></br></br></br></br>
+<style>
+.Aclass{color:red;font-size:15px;}
+</style>
+<a class="Aclass" href="http://www.fzzheng.cn">网站制作：铮铮's blog</a>
+<br><br><br>
+		</center>
+		<br><br><br>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<audio id="audios" controls autoplay="autoplay" class="audio" style="display:none;"></audio>
+
+<script>
+var url=["m2.music.126.net/MnEqJBRU9a1DKY9lM029Vg==/1416170989200419.mp3","m2.music.126.net/MnEqJBRU9a1DKY9lM029Vg==/1416170989200419.mp3"];
+var num = GetRandomNum(0,url.length-1);   
+document.getElementById("audios").src="http://"+url[num];
+function GetRandomNum(Min,Max)
+{
+var Range = Max - Min;   
+var Rand = Math.random();   
+return(Min + Math.round(Rand * Range));   
+}   
+
+function play(){
+var div = document.getElementById('playbtn'); 
+var obj=document.getElementById("audios");
+if(obj.paused){
+obj.play();
+div.setAttribute("class", "btn_sound"); 
+}else{
+obj.pause();
+div.setAttribute("class", "btn_sound btn_no_sound"); 
+}
+
+}
+</script>
+<script src="js/canvas-nest.min.js"></script>
+<div style="display:none"><script type="text/javascript" src="js/count.js"></script></div>
+</body>
+</html>
